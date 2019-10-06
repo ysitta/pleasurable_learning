@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Yaumil Sitta" />
+  <meta name="dcterms.date" content="2019-10-07" />
+  <title>Pleasurable Learning</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="PL_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="PL_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal .slide-menu-button {
+      left: 105px !important;
+    }
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <link href="PL_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="PL_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Pleasurable Learning</h1>
+    <h2 class="author">Yaumil Sitta</h2>
+    <h3 class="date">2019-10-07</h3>
+</section>
+
+<section><section id="background" class="title-slide slide level1"><h1>Background</h1></section><section id="students-functionality-needs" class="slide level2">
+<h2>Students Functionality Needs</h2>
+<ul>
+<li><strong>Learning to know</strong> (it is intended that students discover and master knowledge seeking skills that will serve them)</li>
+<li><strong>Learning to do</strong> (the challenge facing education today is to find methods that will succeed in transforming school knowledge into practical competence)</li>
+<li><strong>Learning to live together</strong> (it means of facing the challenges presented by the social, economic and political globalization of the world, and requires that citizens can understand that their actions will have far-reaching effects on those around them).</li>
+</ul>
+</section><section id="students-usability-needs" class="slide level2">
+<h2>Students Usability Needs</h2>
+<ul>
+<li><strong>Learning to be</strong> (provide opportunities in which students can express themselves and their beliefs and viewpoints, both)</li>
+<li><strong>Learning to learn</strong> (seeing learning in its own right as a process from which pleasure, satisfaction, motivation, and empowerment at an individual/personal level can be derived). </li>
+</ul>
+</section><section id="students-pleasurable-needs" class="slide level2">
+<h2>Students Pleasurable Needs</h2>
+<ul>
+<li><strong>The students’ psychological needs</strong>, i.e., perceptual and emotional experiences also need to be fulfilled (Sharma   et al. 2013). In the educational field, the pleasurability needs help student to enjoy the teaching presented by the instructor.    </li>
+<li><strong>Understand and share multicultural issues</strong> by the pedagogical theory (teaching approach, teaching method, evaluation method, and tools) of ‘diversity,’ which will enlarge the   learning style, cognitive style, personality type, mental and virtual boundaries of schools, teachers, and students</li>
+<li><strong>Develop methods and tools</strong> that can generate and foster the ‘pleasure’ of learning.</li>
+</ul>
+</section></section>
+<section><section id="learning-model-scheme" class="title-slide slide level1"><h1>Learning Model Scheme</h1></section><section id="learning-model-scheme-1" class="slide level2">
+<h2><img data-src="asset/Model-Pembelajaran-skema.JPG" alt="Learning Model Scheme" /></h2>
+</section></section>
+<section><section id="pedagogical-theory" class="title-slide slide level1"><h1>Pedagogical Theory</h1></section><section id="learning-model" class="slide level2">
+<h2>Learning Model</h2>
+<p>Learning model is a plan or pattern that can be used to form long-term lesson plans, design and guide learning in the classroom (Rusman 2010).</p>
+<ul>
+<li><strong>Learning Approach</strong> (Student or teacher centered)<br />
+</li>
+<li><strong>Learning Strategy</strong> (Exposition-discovery learning or group-individual learning)<br />
+</li>
+<li><strong>Learning Methods</strong> (Lecture, discussion, simulation, etc)<br />
+</li>
+<li><strong>Learning Techniques and Tactics</strong> (Specific, individual, unique)</li>
+</ul>
+</section><section id="section" class="slide level2">
+<h2><img data-src="model.PNG" /></h2>
+</section><section id="learning-approach" class="slide level2">
+<h2>Learning Approach</h2>
+</section><section id="section-1" class="slide level2">
+<h2><img data-src="approach.PNG" /></h2>
+</section><section id="learning-strategies" class="slide level2">
+<h2>Learning Strategies</h2>
+<p>Learning strategies refer to Students’ self-generated thoughts, feelings, and actions, which are systematically oriented toward attainment of their goals. (Hasanbegovic, Jasmina 2006)</p>
+</section><section id="learning-method" class="slide level2">
+<h2>Learning Method</h2>
+<p>The method of teaching is a knowledge of teaching methods used by a teacher or instructor. One effort that the teacher has never opened is a way of overcoming the position of the method as one component that takes part in supporting teaching and learning activities.</p>
+</section><section id="section-2" class="slide level2">
+<h2><img data-src="methods.PNG" /></h2>
+</section></section>
+<section><section id="learning-pyramid" class="title-slide slide level1"><h1>Learning Pyramid</h1></section><section id="section-3" class="slide level2">
+<h2><img data-src="asset/learning-pyramid.jpg" /></h2>
+</section></section>
+<section id="student-centered-approach" class="title-slide slide level1"><h1>Student Centered Approach</h1></section>
+<section><section id="how-to-get-students-attention" class="title-slide slide level1"><h1>How to get student’s attention</h1></section><section id="register" class="slide level2">
+<h2>Register</h2>
+<p>A particular part of the range of a voice or instrument.</p>
+</section><section id="timbre" class="slide level2">
+<h2>Timbre</h2>
+<p>The character or quality of a musical sound or voice as distinct from its pitch and intensity.</p>
+</section><section id="prosody" class="slide level2">
+<h2>Prosody</h2>
+<p>The patterns of stress and intonation in a language</p>
+</section><section id="pace" class="slide level2">
+<h2>Pace</h2>
+<p>A unit of length representing the distance between two successive steps</p>
+</section><section id="pitch" class="slide level2">
+<h2>Pitch</h2>
+<p>The quality of a sound governed by the rate of vibrations producing it; the degree of highness or lowness of a tone</p>
+</section><section id="volume" class="slide level2">
+<h2>Volume</h2>
+<p>Quantity or power of sound; degree of loudness</p>
+</section></section>
+<section><section id="conclusion" class="title-slide slide level1"><h1>Conclusion</h1></section><section id="there-is-no-most-effective-learning-model-for-all-subjects-or-for-all-material." class="slide level2">
+<h2>There is no most effective learning model for all subjects or for all material.</h2>
+</section><section id="the-selection-of-learning-models-to-be-applied-by-teachers-in-the-classroom-considers-several-things" class="slide level2">
+<h2>The selection of learning models to be applied by teachers in the classroom considers several things:</h2>
+<ul>
+<li>learning objectives</li>
+<li>nature of the subject matter</li>
+<li>availability of facilities</li>
+<li>conditions of students</li>
+<li>time allocation available</li>
+</ul>
+</section></section>
+<section id="thank-you" class="title-slide slide level1"><h1>Thank You</h1></section>
+    </div>
+  </div>
+
+  <script src="PL_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="PL_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+        menu: {
+          numbers: true,
+          custom: false,
+          themes: false,
+          transitions: false
+        },
+
+
+
+        chalkboard: {
+          toggleNotesButton: true,
+          theme: 'black',
+        },
+
+        keyboard: {
+          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'PL_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'PL_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+          { src: 'PL_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+          { src: 'PL_files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
